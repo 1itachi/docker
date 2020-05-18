@@ -1,0 +1,41 @@
+192.168.99.100    ---- for windows 10 toolbar docker
+
+
+
+
+::::::Creating and Using containers:::::::
+
+1. docker container run --publish 80:80 nginx
+
+we can use any port on the left, if we do we have to use localhost:portNo
+
+ctr-c wont stop the container on windows, we need to explicitly stop it
+
+2. docker stop {docker-id or name}   --- stops docker
+
+3. docker ps      --lists all dockers (old way) ,  docker container ls (new way)
+
+4. docker container run --publish 80:80 --detach nginx    --runs container in background
+
+5. docker container run  --- always starts new   and docker conatiner start --- starts existing stopped one
+
+6. docker conatiner ls -a --- lists all containers even the stopped ones
+
+7. docker container run --publish 80:80 --detach --name webhost nginx   ----gives specified name
+
+8. docker container logs webhost   --gives logs of that conatiner
+
+9. use --help to know more about the commands
+
+10. docker container top <name>   ---to know the process running inside the container
+
+11. docker container rm <ids>    --to remove the containers (can ony be removed after stopped, also can be forced without stopping using -f option)
+
+12. docker run --name mongo -d mongo    -- runs mongodb
+
+13. ps aux    --shows all process running on host (since we are working on windows , it doesn't work)  && ps aux | grep mongo   --looks for word mongo in all processes
+
+14. we only discuss about linux conatiners but windows containers are hot and new, 90% of concpets are same.
+
+
+
