@@ -1,8 +1,5 @@
 192.168.99.100    ---- for windows 10 toolbar docker
 
-
-
-
 ::::::Creating and Using containers:::::::
 
 1. docker container run --publish 80:80 nginx
@@ -35,7 +32,34 @@ ctr-c wont stop the container on windows, we need to explicitly stop it
 
 13. ps aux    --shows all process running on host (since we are working on windows , it doesn't work)  && ps aux | grep mongo   --looks for word mongo in all processes
 
-14. we only discuss about linux conatiners but windows containers are hot and new, 90% of concpets are same.
+14. we only discuss about linux conatiners but windows containers are hot and new, 90% of concpets are same.  We can make use of docs.docker.com.
+
+15. --env to set environment varibales
+		ex: docker container run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+
+16. docker image ls   --lists all docker images used
+
+17. docker container inspect  --details of one conatiner config
+
+18. docker container stats --performance stats for all containers
+
+
+19. docker container run -it     -- start new conatiner interactively
+20. docker container exec -it    -- run additional command in existing container
+
+21. No SSH is needed  --Docker cli is a great substitute for adding SSH to containers
+
+22. docker container run -it --name proxy ngnix bash   --if we use it inside the container we get access to a terminal inside the container
+    docker container start -ai ubuntu  -- command to interactively connect to existing conatiner
+
+23. alpine linux is a small security focused distribution
+
+24. docker container run -p --exposes port
+	docker conatiner port container   --to see all ports open
+
+25.	
+	
+
 
 
 
